@@ -1,4 +1,4 @@
-# clearSKY ☁️  
+# clearSKY
 <img width="404" height="185" alt="image" src="https://github.com/user-attachments/assets/46a625e8-235f-43d8-9bde-3fa23b5a56f5" />
 
 **Academic Grading as a Service**
