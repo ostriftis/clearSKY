@@ -1,72 +1,105 @@
 # clearSKY ☁️  
 **Academic Grading as a Service**
 
-clearSKY is a modern **Software-as-a-Service (SaaS)** platform designed to streamline the academic grading workflow for educational institutions.  
-It enables instructors to publish grades, manage review requests, and finalize submissions efficiently, while offering students transparency and structured feedback.
+clearSKY is a cloud‑native **Software‑as‑a‑Service (SaaS)** platform that modernizes the academic grading workflow for educational institutions.
 
-Developed as part of the **NTUA ECE SaaS 2025** course project.
+It enables instructors to publish grades, manage structured review requests, and finalize submissions efficiently, while providing students with transparency, feedback, and statistical insights.
+
+This project was designed and implemented as part of the **NTUA ECE – Software as a Service (2025)** course, following real‑world SaaS architectural practices.
 
 ---
 
-## ✨ Key Features
+## Problem Statement
 
-### For Instructors
+Academic grading workflows are often:
+- Manual and time‑consuming
+- Poorly standardized across instructors
+- Lacking transparency for students
+- Difficult to scale institution‑wide
+
+clearSKY addresses these issues by providing a **centralized, scalable, and asynchronous grading platform** that supports the full grading lifecycle.
+
+---
+
+## Core Features
+
+### Instructors
 - Upload initial grades using standardized Excel templates
-- Manage grade review requests in a structured workflow
+- Manage grade review requests through a structured workflow
+- Respond to student requests asynchronously
 - Publish final grades securely
 - View grading statistics per course
 
-### For Students
+### Students
 - View published grades
 - Submit grade review requests
 - Track instructor responses
 - Access anonymized grade statistics
 
-### For Institutions
+### Institutions
 - User and role management
-- Credit-based usage model
+- Credit‑based usage model
 - Centralized course oversight
 
 ---
 
-## 🧱 Architecture Overview
+## System Architecture
 
-clearSKY follows a **microservices architecture**, fully containerized and orchestrated using Docker.
+clearSKY is built using a **microservices architecture**, designed for scalability, fault isolation, and asynchronous communication.
 
-- **Backend:** Node.js, SQL
-- **Frontend:** React + TypeScript
-- **Communication:** RabbitMQ (asynchronous message passing)
-- **Authentication:** OAuth (Google Login)
-- **Deployment:** Docker & Docker Compose
+### Architectural Highlights
+- Service‑oriented backend
+- Message‑based communication using RabbitMQ
+- Stateless services
+- Containerized deployment
+- Clear separation of concerns
 
-A detailed architectural diagram is available in the `architecture/` folder (Visual Paradigm).
+A detailed architecture diagram is available in the `architecture/` directory (Visual Paradigm).
 
 ---
 
-## 🔌 Microservices
+## Microservices
 
-| Service | Description |
-|------|------------|
-| **AuthService** | Authentication and authorization |
+| Service | Responsibility |
+|------|----------------|
+| **AuthService** | Authentication & authorization (OAuth) |
 | **CoursesService** | Course and enrollment management |
-| **GradingService** | Grade handling and review workflow |
+| **GradingService** | Grade handling & review workflow |
 | **StatisticsService** | Grade analytics and statistics |
-| **UserManagementService** | User roles and institution management |
-| **Frontend** | React-based web interface |
+| **UserManagementService** | User roles & institution management |
+| **Frontend** | React‑based web interface |
 
 ---
 
-## 🚀 Getting Started
+## Technology Stack
+
+### Backend
+- Node.js
+- SQL databases
+- REST APIs
+- RabbitMQ (asynchronous messaging)
+
+### Frontend
+- React
+- TypeScript
+
+### Infrastructure & DevOps
+- Docker
+- Docker Compose
+- Microservice orchestration
+- Message‑driven architecture
+
+---
+
+## 🚀 Running the Project Locally
 
 ### Prerequisites
 - Docker
 - Docker Compose
 
-### Installation
+### Setup
 
 ```bash
 git clone https://github.com/ntua/saas25-14.git
 cd saas25-14
 docker compose up --build
-
-
