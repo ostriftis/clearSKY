@@ -93,7 +93,7 @@ A detailed architecture diagram is available in the `architecture/` directory (V
 
 ---
 
-## 🚀 Running the Project Locally
+## Running the Project Locally
 
 ### Prerequisites
 - Docker
